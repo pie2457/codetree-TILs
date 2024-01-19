@@ -20,6 +20,7 @@ public class Main {
                 cnt++;
             }
             System.out.println(cnt);
+            cnt = 0;
         }
     }
 }
