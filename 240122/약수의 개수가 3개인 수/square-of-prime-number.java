@@ -18,7 +18,7 @@ public class Main {
                     cnt++;
                 }
             }
-            if (sum == i && cnt == 3) {
+            if (cnt == 3) {
                 answer++;
             }
         }
