@@ -5,8 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        for(int i = 1; i <= n; i++) {
-            if(i == 1) continue;
+        for(int i = 2; i <= n; i++) {
             boolean isprime = true;
             
             for(int j = 2; j < i; j++)
