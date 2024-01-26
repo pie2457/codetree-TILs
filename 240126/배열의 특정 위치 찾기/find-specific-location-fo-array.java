@@ -11,10 +11,10 @@ public class Main {
         for(int i = 0; i < 10; i++) {
             arr[i] = sc.nextInt();
 
-            if (arr[i] % 2 == 0) {
+            if (i % 2 != 0) {
                 sum += arr[i];
             }
-            if (arr[i] % 3 == 0) {
+            if (i == 2 || i == 5 || i == 8) {
                 avg += arr[i];
             }
         }
