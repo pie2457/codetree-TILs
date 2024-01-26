@@ -13,6 +13,8 @@ public class Main {
             if (arr[i] % 2 == 0 && arr[i] != 0) {
                 sum += arr[i];
                 cnt++;
+            } else if (arr[i] == 0) {
+                break;
             }
         }
         System.out.print(cnt + " " + sum);
