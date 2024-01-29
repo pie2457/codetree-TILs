@@ -15,7 +15,7 @@ public class Main {
             a = a / b;
         }
         for(int i = 0; i < 10; i++) {
-            sum += arr[i] * arr[i];
+            sum += Math.pow(arr[i], 2);
         }
         System.out.print(sum);
     }
