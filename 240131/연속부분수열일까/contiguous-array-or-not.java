@@ -25,7 +25,7 @@ public class Main {
 			if (arra[i] == arrb[0]) {
 				x = i;
 				for(int j = 0; j < b; j++) {
-                    if (arra[x + j] >= a) {
+                    if (x + j >= a) {
                         break;
                     } else if (arrb[j] != arra[x + j]) {
 						cnt = 0;
