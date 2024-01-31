@@ -17,7 +17,7 @@ public class Main {
         for(int i = 0; i < q; i++) {
             a = sc.nextInt();
             b = sc.nextInt();
-            if (i == q - 1) {
+            if (a == 3) {
                 c = sc.nextInt();
             }
             if (a == 1) {
