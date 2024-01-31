@@ -24,7 +24,7 @@ public class Main {
                 System.out.println(arr[b]);
             } else if(a == 2) {
                 int x = 0;
-                for(int j = 1; j <= arr.length; j++) {
+                for(int j = 1; j < arr.length; j++) {
                     if (arr[j] == b) {
                         x = j;
                         break;
