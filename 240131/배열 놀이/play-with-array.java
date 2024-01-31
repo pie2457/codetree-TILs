@@ -23,12 +23,14 @@ public class Main {
             if (a == 1) {
                 System.out.println(arr[b]);
             } else if(a == 2) {
+                int x = 0;
                 for(int j = 1; j <= arr.length; j++) {
                     if (arr[j] == b) {
-                        System.out.println(j);
+                        x = j;
                         break;
                     }
                 }
+                System.out.println(x);
             } else if (a == 3) {
                 for(int j = b; j <= c; j++) {
                     System.out.print(arr[j] + " ");
