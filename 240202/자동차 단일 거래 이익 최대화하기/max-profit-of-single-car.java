@@ -15,13 +15,12 @@ public class Main {
             if(arr[i] < min) {
                 point = i;
                 min = arr[i];
-
             }
         }
 
-        for(int i = n - 1; i > point; i--) {
+        for(int i = point; i < n; i++) {
            if(arr[i] - arr[point] > max) {
-                max = arr[i] - arr[point];
+                max = arr[i] - arr[point] ;
            }
         }
         System.out.print(max);
