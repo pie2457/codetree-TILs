@@ -7,28 +7,32 @@ public class Main {
         int n = sc.nextInt();
         int arr[] = new int[n];
         int max = Integer.MIN_VALUE;
-        boolean check = true;
+        int cnt = 0;
+        boolean check[] = new boolean[n];
         
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
-            if (arr[i] > max) {
-                max = arr[i];
-            }
         }
 
         for(int i = 0; i < n; i++) {
             for(int j = i + 1; j < n; j++) {
                 if (arr[i] == arr[j]) {
-                    check = false;
-                } else {
-                    check = true;
+                    check[i] = true;
+                    check[j] = true;
+                    continue;
+                } else if (check[j] == true) {
+                    continue;
                 }
             }
         }
-        if (check) {
-            System.out.print(max);
-        } else {
-            System.out.print(-1);
+
+        for(int i = 0; i < n; i++) {
+            if (check[i] == false) {
+                max = arr[i] > max ? arr[i] : max;
+            } else {
+                cnt++;
+            }
         }
+        System.out.print(cnt == n ? -1 : max);
     }
 }
