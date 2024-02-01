@@ -14,20 +14,20 @@ public class Main {
 
             if(arr[i] > max) {
                 max = arr[i];
-                point = i + 1;
+                point = i;
             }
         }
-        System.out.print(point + " ");
+        System.out.print((point + 1) + " ");
         
-        while (point != 1) {
+        while (point != 0) {
             max = 0;
-            for(int i = 0; i < point - 1; i++) {
-                if (arr[i] > max) {
+            for(int i = point-1; i >= 0; i--) {
+                if (arr[i] >= max) {
                     max = arr[i];
-                    point = i + 1;
+                    point = i;
                 }
             }
-            System.out.print(point + " ");
+            System.out.print((point + 1) + " ");
         }
     }
 }
