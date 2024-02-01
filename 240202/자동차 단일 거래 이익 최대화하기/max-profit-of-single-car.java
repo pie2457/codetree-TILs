@@ -11,18 +11,20 @@ public class Main {
 
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
-
-            if(arr[i] < min) {
-                point = i;
-                min = arr[i];
-            }
         }
+        
+		for(int i = 0; i < n; i++) {
+			if (arr[i] < min) {
+				min = arr[i];
+				point = i;
+			}
+			for (int j = point; j < n; j++) {
+				if (arr[j] - arr[point] > max) {
+					max = arr[j] - arr[point];
+				}
+			}
+		}
+		System.out.print(max);
 
-        for(int i = point; i < n; i++) {
-           if(arr[i] - arr[point] > max) {
-                max = arr[i] - arr[point] ;
-           }
-        }
-        System.out.print(max);
     }
 }
