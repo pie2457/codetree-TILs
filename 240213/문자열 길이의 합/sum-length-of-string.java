@@ -12,10 +12,9 @@ public class Main {
         for(int i = 0; i < n; i++) {
             String s = sc.next();
             result += s.length();
-            for(int j = 0; j < s.length(); j++) {
-                if (s.charAt(j) == c) {
-                    cnt++;
-                }
+            
+            if (s.charAt(0) == 'a') {
+                cnt++;
             }
         }
         System.out.print(result + " " + cnt);
