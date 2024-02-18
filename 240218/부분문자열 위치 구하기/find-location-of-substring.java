@@ -8,10 +8,8 @@ public class Main {
         String st = sc.next();
         int num = -1;
 
-        for(int i = 0; i < s.length()-1; i++) {
-            if (s.contains(st)) {
-                num = s.indexOf(st);
-            }
+        if(s.contains(st)) {
+            num = s.indexOf(st);
         }
         System.out.println(num);
     }
