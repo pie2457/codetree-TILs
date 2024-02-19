@@ -10,8 +10,6 @@ public class Main {
         arr[1] = 'a';
         arr[s.length() - 2] = 'a';
 
-        for(char c : arr) {
-            System.out.print(c);
-        }
+        System.out.print(String.valueOf(arr));
     }
 }
