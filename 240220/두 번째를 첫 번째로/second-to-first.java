@@ -5,15 +5,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         String s = sc.next();
-        char arr[] = s.toCharArray();
-        char c1 = arr[0];
-        char c2 = arr[1];
+        String c1 = String.valueOf(s.charAt(0));
+        String c2 = String.valueOf(s.charAt(1));
 
-        for(int i = 1; i < s.length(); i++) {
-            if (arr[i] == c2) {
-                arr[i] = c1;
-            }
-        }
-        System.out.println(String.valueOf(arr));
+        System.out.println(s.replaceAll(c2, c1));
     }
 }
