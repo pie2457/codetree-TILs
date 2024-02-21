@@ -7,7 +7,7 @@ public class Main {
         String a = sc.next();
         String b = sc.next();
 
-        for(int i = 0; i < a.length(); i++) {
+        while(true) {
             if (a.contains(b)) {
                 int n = a.indexOf(b);
                 a = a.substring(0, n) + a.substring(n + b.length());
