@@ -6,14 +6,14 @@ public class Main {
 
         int n = sc.nextInt();
 
-        System.out.println(add(n) / 10);
+        add(n);
     }
 
-    public static int add(int n) {
+    public static void add(int n) {
         int sum = 0;
         for(int i = 1; i <= n; i++) {
             sum += i;
         }
-        return sum;
+        System.out.println(sum / 10);
     }
 }
