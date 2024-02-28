@@ -22,7 +22,7 @@ public class Main {
     }
 
     static boolean divide(int n) {
-        return n / 10 == 3 || n / 10 == 6 || n / 10 == 9 ||
-               n % 10 == 3 || n % 10 == 6 || n % 10 == 9;
+        String s = String.valueOf(n);
+        return s.contains("3") || s.contains("6") || s.contains("9");
     }
 }
