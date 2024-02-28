@@ -7,10 +7,10 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println(Math.round(pow(a, b)));
+        System.out.println(pow(a, b));
     }
 
-    static double pow(int a, int b) {
-        return Math.pow(a, b);
+    static int pow(int a, int b) {
+        return (int) Math.pow(a, b);
     }
 }
