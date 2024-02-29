@@ -33,10 +33,10 @@ public class Main {
         } else if (!year(y) && m == 2 && d <= 28) {
             return true;
         }
-        if (d <= 31 && m == 1 || m == 3 || m == 5 || m == 7 ||
-        m == 8 || m == 10 || m == 12) {
+        if (d <= 31 && (m == 1 || m == 3 || m == 5 || m == 7 ||
+        m == 8 || m == 10 || m == 12)) {
             return true;
-        } else if (d <= 30 && m == 4 || m == 6 || m == 9 || m == 11) {
+        } else if (d <= 30 && (m == 4 || m == 6 || m == 9 || m == 11)) {
             return true;
         }
         return false;
@@ -50,7 +50,7 @@ public class Main {
         if (m >= 3 && m <= 5) {
             return "Spring";
         } else if (m >= 6 && m <= 8) {
-            return "Summber";
+            return "Summer";
         } else if (m >= 9 && m <= 11) {
             return "Fall";
         }
