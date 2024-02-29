@@ -23,6 +23,9 @@ public class Main {
     }
 
     static boolean day(int y,int m, int d) {
+        if (d > 31) {
+            return false;
+        }
         if (year(y) && m == 2 && d <= 29) {
             return true;
         } else if (!year(y) && m == 2 && d <= 28) {
