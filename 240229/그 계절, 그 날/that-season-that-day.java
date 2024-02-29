@@ -16,10 +16,10 @@ public class Main {
     }
 
     static boolean year(int y) {
-        if (y >= 1 && y <= 3000) {
+        if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
             return true;
-        } else if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
-            return true;
+        } else if (y < 1 && y > 3000) {
+            return false;
         }
         return false;
     }
@@ -53,7 +53,7 @@ public class Main {
             return "Summber";
         } else if (m >= 9 && m <= 11) {
             return "Fall";
-        } else {
+        } else if (m >= 2 && m <= 12){
             return "Winter";
         }
     }
