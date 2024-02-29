@@ -53,8 +53,7 @@ public class Main {
             return "Summber";
         } else if (m >= 9 && m <= 11) {
             return "Fall";
-        } else if (m >= 2 && m <= 12){
-            return "Winter";
         }
+        return "Winter";
     }
 }
