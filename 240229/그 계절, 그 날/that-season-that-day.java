@@ -16,7 +16,9 @@ public class Main {
     }
 
     static boolean year(int y) {
-        if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+        if (y >= 1 && y <= 3000) {
+            return true;
+        } else if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
             return true;
         }
         return false;
