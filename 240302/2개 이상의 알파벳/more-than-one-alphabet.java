@@ -12,7 +12,7 @@ public class Main {
         int cnt = 0;
         for(int i = 1; i < s.length(); i++) {
             if (s.charAt(i-1) != s.charAt(i)) {
-                cnt++;
+                cnt+=2;
             }
         }
         if (cnt >= 2) {
