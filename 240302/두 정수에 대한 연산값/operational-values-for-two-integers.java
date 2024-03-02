@@ -7,10 +7,10 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println(calculator(a, b));
+        calculator(a, b);
     }
 
-    static String calculator(int a, int b) {
+    static void calculator(int a, int b) {
        if (a > b) {
         a += 25;
         b *= 2;
@@ -18,6 +18,6 @@ public class Main {
         b += 25;
         a *= 2;
        }
-       return String.valueOf(a) + " " + String.valueOf(b);
+       System.out.println(a + " " + b);
     }
 }
