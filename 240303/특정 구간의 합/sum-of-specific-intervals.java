@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Main {
-    public static int arr[] = new int[100];
+    public static int arr[];
     public static int sum = 0;
 
     public static void main(String[] args) {
@@ -9,6 +9,7 @@ public class Main {
 
         int n = sc.nextInt();
         int m = sc.nextInt();
+        arr = new int[n];
 
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
