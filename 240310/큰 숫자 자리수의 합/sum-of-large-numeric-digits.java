@@ -12,9 +12,9 @@ public class Main {
     }
 
     static int calc(int n) {
-        if (n % 10 == 0) {
-            return n;
-        }
-        return n % 10 + calc(n / 10);
+        if (n / 10 == 0) {
+			return n;
+		}
+		return n % 10 + calc(n / 10);
     }
 }
