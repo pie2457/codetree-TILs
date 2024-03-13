@@ -12,7 +12,7 @@ public class Main {
 
 		for(int i = 0; i < n; i++) {
 			str[i] = sc.nextLine();
-			if (str[i].startsWith(s)) {
+			if (str[i].startsWith(s) && str[i].length() >= s.length()) {
 				cnt++;
 			}
 		}
@@ -25,6 +25,7 @@ public class Main {
 				check++;
 			}
 		}
+
 		Arrays.sort(arr);
 		System.out.println(arr[k-1]);
     }
