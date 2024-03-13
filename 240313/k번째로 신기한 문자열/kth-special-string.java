@@ -8,25 +8,31 @@ public class Main {
 		int k = sc.nextInt();
 		String s = sc.next();
 		String str[] = new String[n];
+		String arr[] = new String[n];
 		int cnt = 0;
-
+		
 		for(int i = 0; i < n; i++) {
 			str[i] = sc.nextLine();
-			if (str[i].startsWith(s)) {
+
+			if (startsWith(str[i], s)) {
+				arr[cnt] = str[i];
 				cnt++;
 			}
 		}
 
-		int check = 0;
-		String arr[] = new String[cnt];
-		for(int i = 0; i < n; i++) {
-			if (str[i].startsWith(s) && str[i].length() >= s.length()) {
-				arr[check] = str[i];
-				check++;
-			}
-		}
+		Arrays.sort(arr, 0, cnt);
+		
+		System.out.print(arr[k-1]);
+    }
 
-		Arrays.sort(arr);
-		System.out.println(arr[k-1]);
+	 static boolean startsWith(String a, String b) {
+        if((int) a.length() < (int) b.length())
+            return false;
+    
+        for(int i = 0; i < (int) b.length(); i++)
+            if(a.charAt(i) != b.charAt(i))
+                return false;
+        
+        return true;
     }
 }
