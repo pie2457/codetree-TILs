@@ -1,38 +1,43 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-		int n = sc.nextInt();
-		int k = sc.nextInt();
-		String s = sc.next();
-		String str[] = new String[n];
-		String arr[] = new String[n];
-		int cnt = 0;
-		
-		for(int i = 0; i < n; i++) {
-			str[i] = sc.nextLine();
-
-			if (startsWith(str[i], s)) {
-				arr[cnt] = str[i];
-				cnt++;
-			}
-		}
-
-		Arrays.sort(arr, 0, cnt);
-		
-		System.out.print(arr[k-1]);
-    }
-
-	 static boolean startsWith(String a, String b) {
+    public static final int MAX_N = 100;
+    
+    public static int n, k;
+    public static String t;
+    public static int cnt;
+    
+    public static String[] str = new String[MAX_N];
+    public static String[] words = new String[MAX_N];
+    
+    public static boolean startsWith(String a, String b) {
         if((int) a.length() < (int) b.length())
             return false;
-    
+        
         for(int i = 0; i < (int) b.length(); i++)
             if(a.charAt(i) != b.charAt(i))
                 return false;
         
         return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        n = sc.nextInt();
+        k = sc.nextInt();
+        t = sc.next();
+		
+        for(int i = 0; i < n; i++) {
+            str[i] = sc.next();
+            
+            if(startsWith(str[i], t))
+                words[cnt++] = str[i];
+        }
+        
+        Arrays.sort(words, 0, cnt);
+        
+        System.out.print(words[k - 1]);
     }
 }
