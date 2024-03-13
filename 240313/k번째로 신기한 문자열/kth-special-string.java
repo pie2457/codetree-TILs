@@ -11,8 +11,8 @@ public class Main {
 		int cnt = 0;
 
 		for(int i = 0; i < n; i++) {
-			str[i] = sc.next();
-			if (str[i].contains(s)) {
+			str[i] = sc.nextLine();
+			if (str[i].startsWith(s)) {
 				cnt++;
 			}
 		}
@@ -20,7 +20,7 @@ public class Main {
 		int check = 0;
 		String arr[] = new String[cnt];
 		for(int i = 0; i < n; i++) {
-			if (str[i].contains(s)) {
+			if (str[i].startsWith(s)) {
 				arr[check] = str[i];
 				check++;
 			}
