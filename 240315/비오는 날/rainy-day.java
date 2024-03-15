@@ -1,45 +1,44 @@
-import java.util.*;
-import java.time.format.DateTimeFormatter;
-import java.time.*;
+import java.util.Scanner; 
+import java.util.Arrays; 
+import java.util.Collections;
+
+class Data implements Comparable<Data>{
+    String date, day, weather;
+
+    public Data (String date, String day, String weather) {
+        this.date = date;
+        this.day = day;
+        this.weather = weather;
+    }
+
+    @Override
+    public int compareTo(Data data) {
+        return this.date.compareTo(data.date);
+    }   
+}
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        LocalDate localDate[] = new LocalDate[n];
+        Data[] datas = new Data[n];
 
-        int cnt = 0;
-        LocalDateTime local = LocalDateTime.now();
-        String now = local.format(
-            DateTimeFormatter.ofPattern("2024-3-15"));
-
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             String date = sc.next();
             String day = sc.next();
             String weather = sc.next();
 
-            localDate[i] = new LocalDate(date, day, weather);
-
-            if (weather.equals("Rain") && now.compareTo(date) == -1) {
-                now = date;
-                cnt = i;
-            }
+            datas[i] = new Data(date, day, weather);
         }
 
-        System.out.println(localDate[cnt].date + " " + localDate[cnt].day + " " + localDate[cnt].weather);
-    }
+        Arrays.sort(datas, 0, n);
 
-    static class LocalDate {
-
-        String date;
-        String day;
-        String weather;
-
-        public LocalDate(String date, String day, String weather) {
-            this.date = date;
-            this.day = day;
-            this.weather = weather;
+        for(Data data : datas) {
+            if (data.weather.equals("Rain")) {
+                System.out.println(data.date + " " + data.day + " " + data.weather);
+                break;
+            }
         }
     }
 }
