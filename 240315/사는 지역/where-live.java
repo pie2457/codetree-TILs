@@ -6,9 +6,7 @@ public class Main {
 
         int n = sc.nextInt();
         Person personList[] = new Person[n];
-
-        char c = 'a';
-        int cnt = Integer.MAX_VALUE;
+        String names[] = new String[n];
 
         for(int i = 0; i < n; i++) {
             String name = sc.next();
@@ -16,16 +14,19 @@ public class Main {
             String region = sc.next();
 
             personList[i] = new Person(name, address, region);
-
-            if (name.charAt(0) > c) {
-                c = name.charAt(0);
-                cnt = i;
-            }
+            names[i] = name;
         }
 
-        System.out.println("name " + personList[cnt].name);
-        System.out.println("addr " + personList[cnt].address);
-        System.out.println("city " + personList[cnt].region);
+        Arrays.sort(names);
+
+        for(Person per : personList) {
+            if (per.name.equals(names[n-1])) {
+                System.out.println("name " + per.name);
+                System.out.println("addr " + per.address);
+                System.out.println("city " + per.region);
+                break;
+            }
+        }
     }
 
     static class Person {
