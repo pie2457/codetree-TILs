@@ -12,7 +12,7 @@ public class Main {
         int cnt = 0;
         LocalDateTime local = LocalDateTime.now();
         String now = local.format(
-            DateTimeFormatter.ofPattern("2100-12-31"));
+            DateTimeFormatter.ofPattern("2024-3-15"));
 
         for(int i = 0; i < n; i++) {
             String date = sc.next();
@@ -21,7 +21,7 @@ public class Main {
 
             localDate[i] = new LocalDate(date, day, weather);
 
-            if (weather.equals("Rain") && date.compareTo(now) == -1) {
+            if (weather.equals("Rain") && now.compareTo(date) == -1) {
                 now = date;
                 cnt = i;
             }
