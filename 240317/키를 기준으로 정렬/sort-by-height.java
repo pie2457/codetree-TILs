@@ -15,15 +15,15 @@ public class Main {
             persons[i] = new Person(name, height, weight);
         }
 
-        Arrays.sort(persons);
+        Arrays.sort(persons, (a, b) -> a.height - b.height);
 
         for(Person person : persons) {
             System.out.println(person.name + " " + person.height + " " + person.weight);
         }
     }
 
-    static class Person implements Comparable<Person> {
-
+    static class Person {
+        
         String name;
         int height;
         int weight;
@@ -33,10 +33,5 @@ public class Main {
             this.height = height;
             this.weight = weight;
         }
-
-        @Override
-        public int compareTo(Person person) {
-            return this.height - person.height;
-        } 
     }
 }
