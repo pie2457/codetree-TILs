@@ -8,6 +8,10 @@ public class Main {
 
         int n = Integer.parseInt(s.replaceFirst("0", "1"), 2);
 
+        if (!s.contains("0")) {
+            n = 0;
+        }
+
         System.out.println(n);
     }
 }
