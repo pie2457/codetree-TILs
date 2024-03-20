@@ -6,11 +6,15 @@ public class Main {
 
         String s = sc.next();
 
-        int n = Integer.parseInt(s.replaceFirst("0", "1"), 2);
-
-        if (!s.contains("0")) {
-            n = 0;
+        if (s.contains("0")) {
+            s = s.replaceFirst("0", "1");
+        } else {
+            char c = '0';
+            s = s.substring(0, s.length() - 1);
+            s += c;
         }
+
+        int n = Integer.parseInt(s, 2);
 
         System.out.println(n);
     }
