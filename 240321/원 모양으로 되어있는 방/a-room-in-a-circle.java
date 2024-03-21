@@ -17,9 +17,9 @@ public class Main {
 			int sum = 0;
 			for (int j = 1; j <= n; j++) {
 				if (i > j) {
-					sum += arr[j] * Math.abs((i - j) + (n - i));
+					sum += arr[j] * Math.abs((n - i) + j);
 				} else {
-					sum += Math.abs(arr[j] * (i - j));
+					sum += Math.abs(arr[j] * (j - i));
 				}
 			}
 			if (min > sum) {
