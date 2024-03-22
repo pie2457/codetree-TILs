@@ -11,8 +11,15 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        Arrays.sort(arr);
+        int max = 0;
 
-        System.out.println(arr[n-1] + arr[n - 3]);
+        for(int i = 0; i < n; i++) {
+            for(int j = i + 2; j < n; j++) {
+                if (arr[i] + arr[j] > max) {
+                    max = arr[i] + arr[j];
+                }
+            }
+        }
+        System.out.println(max);
     }
 }
