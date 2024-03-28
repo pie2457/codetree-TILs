@@ -18,14 +18,21 @@ public class Main {
 
 		int max = 0;
 
-        for(int i = 0; i < n - 1; i++) {
+        for(int i = 0; i < n; i++) {
 			for(int j = 0; j < n - 2; j++) {
 				int sum = 0;
+				int sum2 = 0;
 				for(int k = 0; k < 3; k++) {
-					sum += (arr[i][j+k] + arr[i+1][j+k]);
+					if (i + 1 < n) {
+						sum += (arr[i][j+k] + arr[i+1][j+k]);
+					}
+
+					if(j + 6 <= n) {
+						sum2 += (arr[i][j+3+k] + arr[i][j+k]);
+					}
 				}
-				if (sum > max) {
-					max = sum;
+				if (Math.max(sum, sum2) > max) {
+					max = Math.max(sum, sum2);
 				}
 			}
 		}
