@@ -23,8 +23,8 @@ public class Main {
                 int all = sum;
                 sum -= arr[i] + arr[j];
 
-                if (sum - s < min) {
-                    min = sum - s;
+                if (Math.max(sum,s) - Math.min(sum, s) < min) {
+                    min = Math.max(sum,s) - Math.min(sum, s);
                 }
                 sum = all;
             }
