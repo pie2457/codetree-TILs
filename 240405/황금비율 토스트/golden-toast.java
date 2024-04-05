@@ -30,9 +30,7 @@ public class Main {
 				it.add(c);
 			}
 		}
-		while(it.hasPrevious()) {
-			it.previous();
-		}
+		it = ll.listIterator();
 
 		while(it.hasNext()) {
 			System.out.print(it.next());
