@@ -10,12 +10,12 @@ public class Main {
         for(int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
-            if (c == '(') {
+            if (st.isEmpty() == true || c == '(') {
                 st.push(c);
-            } else if (!st.empty() && c == ')'){
+            } else {
                 st.pop();
             }
         }
-        System.out.println(st.size() == 0 ? "Yes" : "No");
+        System.out.println(st.isEmpty() ? "Yes" : "No");
     }
 }
