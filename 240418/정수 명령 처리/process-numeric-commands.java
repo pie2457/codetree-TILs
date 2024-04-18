@@ -16,7 +16,7 @@ public class Main {
             } else if (s.equals("size")) {
                 System.out.println(stack.size());
             } else if (s.equals("empty")) {
-                System.out.println(stack.empty() ? 1 : 0);
+                System.out.println(stack.isEmpty() ? 1 : 0);
             } else if (s.equals("pop")) {
                 System.out.println(stack.pop());
             } else if (s.equals("top")) {
