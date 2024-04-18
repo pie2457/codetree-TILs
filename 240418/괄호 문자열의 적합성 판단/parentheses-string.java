@@ -12,7 +12,7 @@ public class Main {
 
             if (c == '(') {
                 st.push(c);
-            } else {
+            } else if (!s.isEmpty() && c == ')'){
                 st.pop();
             }
         }
